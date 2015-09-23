@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CA6C82B51BA13A44008DAF4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C82B41BA13A44008DAF4A /* AppDelegate.swift */; };
-		CA6C82B71BA13A44008DAF4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C82B61BA13A44008DAF4A /* ViewController.swift */; };
 		CA6C82BA1BA13A44008DAF4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82B81BA13A44008DAF4A /* Main.storyboard */; };
 		CA6C82BC1BA13A44008DAF4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82BB1BA13A44008DAF4A /* Images.xcassets */; };
 		CA6C82BF1BA13A44008DAF4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82BD1BA13A44008DAF4A /* LaunchScreen.xib */; };
 		CA6C82CB1BA13A44008DAF4A /* alarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C82CA1BA13A44008DAF4A /* alarmTests.swift */; };
+		CA6C82D71BA19F1C008DAF4A /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82D61BA19F1C008DAF4A /* alarm.caf */; };
+		CAC8886E1BA979C50029333E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC8886D1BA979C50029333E /* TableViewController.swift */; };
+		CAC888721BB2B5420029333E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC888711BB2B5420029333E /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		CA6C82AF1BA13A44008DAF4A /* alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6C82B31BA13A44008DAF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA6C82B41BA13A44008DAF4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA6C82B61BA13A44008DAF4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA6C82B91BA13A44008DAF4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA6C82BB1BA13A44008DAF4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA6C82BE1BA13A44008DAF4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CA6C82C41BA13A44008DAF4A /* alarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6C82C91BA13A44008DAF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA6C82CA1BA13A44008DAF4A /* alarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmTests.swift; sourceTree = "<group>"; };
+		CA6C82D61BA19F1C008DAF4A /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm.caf; sourceTree = "<group>"; };
+		CAC8886D1BA979C50029333E /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CAC888711BB2B5420029333E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,9 @@
 		CA6C82B11BA13A44008DAF4A /* alarm */ = {
 			isa = PBXGroup;
 			children = (
+				CAC888711BB2B5420029333E /* ViewController.swift */,
 				CA6C82B41BA13A44008DAF4A /* AppDelegate.swift */,
-				CA6C82B61BA13A44008DAF4A /* ViewController.swift */,
+				CAC8886D1BA979C50029333E /* TableViewController.swift */,
 				CA6C82B81BA13A44008DAF4A /* Main.storyboard */,
 				CA6C82BB1BA13A44008DAF4A /* Images.xcassets */,
 				CA6C82BD1BA13A44008DAF4A /* LaunchScreen.xib */,
@@ -90,6 +95,7 @@
 		CA6C82B21BA13A44008DAF4A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA6C82D61BA19F1C008DAF4A /* alarm.caf */,
 				CA6C82B31BA13A44008DAF4A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -194,6 +200,7 @@
 			files = (
 				CA6C82BA1BA13A44008DAF4A /* Main.storyboard in Resources */,
 				CA6C82BF1BA13A44008DAF4A /* LaunchScreen.xib in Resources */,
+				CA6C82D71BA19F1C008DAF4A /* alarm.caf in Resources */,
 				CA6C82BC1BA13A44008DAF4A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA6C82B71BA13A44008DAF4A /* ViewController.swift in Sources */,
+				CAC888721BB2B5420029333E /* ViewController.swift in Sources */,
+				CAC8886E1BA979C50029333E /* TableViewController.swift in Sources */,
 				CA6C82B51BA13A44008DAF4A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = alarm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = alarm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -409,6 +419,7 @@
 				CA6C82D01BA13A44008DAF4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA6C82D11BA13A44008DAF4A /* Build configuration list for PBXNativeTarget "alarmTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +428,7 @@
 				CA6C82D31BA13A44008DAF4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
