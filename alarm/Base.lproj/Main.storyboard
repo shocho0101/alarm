@@ -287,7 +287,7 @@
                         <barButtonItem key="rightBarButtonItem" title="一覧" id="Ndo-co-CHh">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="53f-KC-X8R" kind="show" id="mCz-iU-AbK"/>
+                                <segue destination="KO8-0c-eMq" kind="show" id="n4l-Ra-Bqw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -314,48 +314,32 @@
             </objects>
             <point key="canvasLocation" x="1117" y="356"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="mjG-6O-iLY">
+        <!--一覧-->
+        <scene sceneID="M9P-Kf-r0w">
             <objects>
-                <viewController id="53f-KC-X8R" customClass="TableViewController" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fgW-Ja-fNv"/>
-                        <viewControllerLayoutGuide type="bottom" id="3wA-dH-Uou"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GeH-E4-QJC">
+                <tableViewController id="KO8-0c-eMq" customClass="TableViewController" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="c0e-Fj-SGb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4mM-ZB-NVx">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" rowHeight="117" id="Dwv-XB-iAZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="663" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dwv-XB-iAZ" id="vtx-gb-S4f">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="4mM-ZB-NVx" firstAttribute="top" secondItem="GeH-E4-QJC" secondAttribute="topMargin" id="LnB-LV-ufL"/>
-                            <constraint firstItem="4mM-ZB-NVx" firstAttribute="leading" secondItem="GeH-E4-QJC" secondAttribute="leadingMargin" constant="-16" id="kCf-wj-49i"/>
-                            <constraint firstItem="3wA-dH-Uou" firstAttribute="top" secondItem="4mM-ZB-NVx" secondAttribute="bottom" id="mfx-wN-gTe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4mM-ZB-NVx" secondAttribute="trailing" constant="-16" id="rDO-XK-k7q"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="cKn-Gf-919"/>
-                    <connections>
-                        <outlet property="table" destination="4mM-ZB-NVx" id="Ezm-M5-FJd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9UZ-3A-1dC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dJ9-pT-Wil">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dJ9-pT-Wil" id="hFB-SK-hJy">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KO8-0c-eMq" id="B1A-xG-6yj"/>
+                            <outlet property="delegate" destination="KO8-0c-eMq" id="Kxk-z9-k4v"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="一覧" id="Vxm-jh-mD4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLA-wo-q4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="361"/>
+            <point key="canvasLocation" x="1870" y="356"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L6T-ul-I2G">

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>14BAEF78-7C0F-4A8A-AAB1-951E85556C70</string>
 	<key>IDESourceControlProjectName</key>
-	<string>alarm</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F156493D726CC195CFE78AA09529F5201F5F7DAF</key>
 		<string>https://github.com/shocho0101/alarm.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>alarm.xcodeproj</string>
+	<string>alarm.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F156493D726CC195CFE78AA09529F5201F5F7DAF</key>

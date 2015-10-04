@@ -118,7 +118,8 @@ class ViewController: UIViewController {
         notification.alertBody = "アラーム"
         notification.alertAction = "開く"
         notification.soundName = "alarm.caf"
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        notification.userInfo = ["timeID": String(setHour) + String(setMinutes), "hour": String(setHour), "minute": String(setMinutes)]
+        UIApplication.sharedApplication().scheduleLocalNotification(notification);
         
         //入力画面の初期化
         selectLabel = 1
@@ -144,7 +145,12 @@ class ViewController: UIViewController {
         alart.addAction(okButton)
         self.presentViewController(alart, animated: true, completion: nil)
         
-
+        
+        var notifications = UIApplication.sharedApplication().scheduledLocalNotifications
+        for aNotification in notifications{
+            let userinfo: NSDictionary = aNotification.userInfo!!
+            println(userinfo["timeID"])
+        }
     }
     
     @IBAction func clear(){
