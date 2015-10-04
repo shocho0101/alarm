@@ -34,6 +34,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -95,44 +96,64 @@ class ViewController: UIViewController {
         var distantSecond: Int!
         var setHour: Int = label1.text!.toInt()! * 10 + label2.text!.toInt()!
         var setMinutes: Int = label3.text!.toInt()! * 10 + label4.text!.toInt()!
+        var samedate: Bool = false
         
-        if setMinutes >= nowMinute{
-            distantMinute = setMinutes - nowMinute
-        }else{
-            distantMinute = setMinutes - nowMinute + 60
-            nowHour = nowHour + 1
+        
+        //同じ時間にアラームがセットされていないか確認
+        var notifications = UIApplication.sharedApplication().scheduledLocalNotifications
+        for aNotification in notifications{
+            let userinfo: NSDictionary = aNotification.userInfo!!
+            if userinfo["timeID"] as! String == String(setHour) + String(setMinutes){
+                samedate = true
+            }
+        }
+        
+        
+        if samedate == false{
+            //ローカル通知の設定
+            if setMinutes >= nowMinute{
+                distantMinute = setMinutes - nowMinute
+            }else{
+                distantMinute = setMinutes - nowMinute + 60
+                nowHour = nowHour + 1
+            }
+            if setHour >= nowHour{
+                distantHour = setHour - nowHour
+            }else{
+                distantHour = setHour - nowHour + 24
+            }
             
+            var notification = UILocalNotification()
+            notification.fireDate = NSDate(timeIntervalSinceNow: Double((distantHour * 60 + distantMinute) * 60 - nowSecond))
+            notification.timeZone = NSTimeZone.defaultTimeZone()
+            notification.alertBody = "アラーム"
+            notification.alertAction = "開く"
+            notification.soundName = "alarm.caf"
+            notification.userInfo = ["timeID": String(setHour) + String(setMinutes), "hour": String(setHour), "minute": String(setMinutes)]
+            UIApplication.sharedApplication().scheduleLocalNotification(notification);
+            
+            
+            //入力画面の初期化
+            selectLabel = 1
+            changeEnabled([Button3, Button4, Button5, Button6, Button7, Button8, Button9], enabled: false)
+            label1.text = "0"
+            label2.text = "0"
+            label3.text = "0"
+            label4.text = "0"
+            label1.backgroundColor = UIColor.orangeColor()
+            label2.backgroundColor = nil
+            label3.backgroundColor = nil
+            label4.backgroundColor = nil
+            
+            
+            
+            //ログ表示
+            var notifications = UIApplication.sharedApplication().scheduledLocalNotifications
+            for aNotification in notifications{
+                let userinfo: NSDictionary = aNotification.userInfo!!
+                println(userinfo["timeID"])
+            }
         }
-        
-        if setHour >= nowHour{
-            distantHour = setHour - nowHour
-        }else{
-            distantHour = setHour - nowHour + 24
-        }
-        
-        
-        
-        var notification = UILocalNotification()
-        notification.fireDate = NSDate(timeIntervalSinceNow: Double((distantHour * 60 + distantMinute) * 60 - nowSecond))
-        notification.timeZone = NSTimeZone.defaultTimeZone()
-        notification.alertBody = "アラーム"
-        notification.alertAction = "開く"
-        notification.soundName = "alarm.caf"
-        notification.userInfo = ["timeID": String(setHour) + String(setMinutes), "hour": String(setHour), "minute": String(setMinutes)]
-        UIApplication.sharedApplication().scheduleLocalNotification(notification);
-        
-        //入力画面の初期化
-        selectLabel = 1
-        changeEnabled([Button3, Button4, Button5, Button6, Button7, Button8, Button9], enabled: false)
-        label1.text = "0"
-        label2.text = "0"
-        label3.text = "0"
-        label4.text = "0"
-        label1.backgroundColor = UIColor.orangeColor()
-        label2.backgroundColor = nil
-        label3.backgroundColor = nil
-        label4.backgroundColor = nil
-        
         
         
         //alartを表示
@@ -144,13 +165,6 @@ class ViewController: UIViewController {
         }
         alart.addAction(okButton)
         self.presentViewController(alart, animated: true, completion: nil)
-        
-        
-        var notifications = UIApplication.sharedApplication().scheduledLocalNotifications
-        for aNotification in notifications{
-            let userinfo: NSDictionary = aNotification.userInfo!!
-            println(userinfo["timeID"])
-        }
     }
     
     @IBAction func clear(){
@@ -177,7 +191,7 @@ class ViewController: UIViewController {
             if label4.text != "0"{
                 label4.text = "0"
             }else{
-            selectLabel = 3
+                selectLabel = 3
             label3.backgroundColor = UIColor.orangeColor()
             label4.backgroundColor = nil
             changeEnabled([Button6, Button7, Button8, Button9], enabled: true)

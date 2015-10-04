@@ -15,6 +15,7 @@
 		CA6C82D71BA19F1C008DAF4A /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82D61BA19F1C008DAF4A /* alarm.caf */; };
 		CABDAAE71BC153E3008A75FF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE61BC153E3008A75FF /* TableViewController.swift */; };
 		CABDAAE91BC16333008A75FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE81BC16333008A75FF /* ViewController.swift */; };
+		CABDAAEB1BC16A46008A75FF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAEA1BC16A46008A75FF /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		CA6C82D61BA19F1C008DAF4A /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm.caf; sourceTree = "<group>"; };
 		CABDAAE61BC153E3008A75FF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CABDAAE81BC16333008A75FF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CABDAAEA1BC16A46008A75FF /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +83,10 @@
 		CA6C82B11BA13A44008DAF4A /* alarm */ = {
 			isa = PBXGroup;
 			children = (
+				CA6C82B41BA13A44008DAF4A /* AppDelegate.swift */,
 				CABDAAE81BC16333008A75FF /* ViewController.swift */,
 				CABDAAE61BC153E3008A75FF /* TableViewController.swift */,
-				CA6C82B41BA13A44008DAF4A /* AppDelegate.swift */,
+				CABDAAEA1BC16A46008A75FF /* TableViewCell.swift */,
 				CA6C82B81BA13A44008DAF4A /* Main.storyboard */,
 				CA6C82BB1BA13A44008DAF4A /* Images.xcassets */,
 				CA6C82BD1BA13A44008DAF4A /* LaunchScreen.xib */,
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABDAAE91BC16333008A75FF /* ViewController.swift in Sources */,
+				CABDAAEB1BC16A46008A75FF /* TableViewCell.swift in Sources */,
 				CABDAAE71BC153E3008A75FF /* TableViewController.swift in Sources */,
 				CA6C82B51BA13A44008DAF4A /* AppDelegate.swift in Sources */,
 			);
