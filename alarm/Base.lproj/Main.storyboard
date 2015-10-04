@@ -179,7 +179,7 @@
                                 <rect key="frame" x="200" y="493" width="200" height="107"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="C">
+                                <state key="normal" title="←">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -287,7 +287,7 @@
                         <barButtonItem key="rightBarButtonItem" title="一覧" id="Ndo-co-CHh">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="53f-KC-X8R" kind="push" id="mCz-iU-AbK"/>
+                                <segue destination="53f-KC-X8R" kind="show" id="mCz-iU-AbK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -304,10 +304,10 @@
                         <outlet property="Button9" destination="wRJ-SK-hrq" id="coK-cP-qeW"/>
                         <outlet property="Clear" destination="a58-T6-1vN" id="D7C-9l-t8h"/>
                         <outlet property="Set" destination="AR6-aN-ybS" id="bDx-8i-0qp"/>
-                        <outlet property="labal1" destination="4Xo-x4-c5G" id="1YY-oL-zrX"/>
-                        <outlet property="labal2" destination="rbE-te-h9Y" id="Y9K-9Q-Eie"/>
-                        <outlet property="labal3" destination="M0F-Ie-heu" id="xuq-Z4-1VD"/>
-                        <outlet property="labal4" destination="JeG-dg-3Z6" id="dxG-s1-GCy"/>
+                        <outlet property="label1" destination="4Xo-x4-c5G" id="Rur-as-hPc"/>
+                        <outlet property="label2" destination="rbE-te-h9Y" id="oRn-Ma-7HC"/>
+                        <outlet property="label3" destination="M0F-Ie-heu" id="Eyu-u7-wZ5"/>
+                        <outlet property="label4" destination="JeG-dg-3Z6" id="LVy-Lg-VTF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var labal1: UILabel!
-    @IBOutlet var labal2: UILabel!
-    @IBOutlet var labal3: UILabel!
-    @IBOutlet var labal4: UILabel!
+    @IBOutlet var label1: UILabel!
+    @IBOutlet var label2: UILabel!
+    @IBOutlet var label3: UILabel!
+    @IBOutlet var label4: UILabel!
     
     @IBOutlet var Button1: UIButton!
     @IBOutlet var Button2: UIButton!
@@ -88,37 +88,91 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clear(){
-        
+        switch selectButton{
+        case 1:
+            label1.text = "0"
+        case 2:
+            selectButton = 1
+            label1.backgroundColor = UIColor.orangeColor()
+            label2.backgroundColor = nil
+            changeEnabled([Button3, Button4, Button5, Button6, Button7, Button8, Button9], enabled: false)
+            label1.text = "0"
+        case 3:
+            selectButton = 2
+            label2.backgroundColor = UIColor.orangeColor()
+            label3.backgroundColor = nil
+            if label1.text == "2" {
+                changeEnabled([Button4, Button5], enabled: false)
+            }else{
+                changeEnabled([Button6, Button7, Button8, Button9], enabled: true)
+            }
+            label2.text = "0"
+        case 4:
+            if label4.text != "0"{
+                label4.text = "0"
+            }else{
+            selectButton = 3
+            label3.backgroundColor = UIColor.orangeColor()
+            label4.backgroundColor = nil
+            changeEnabled([Button6, Button7, Button8, Button9], enabled: true)
+            label3.text = "0"
+            }
+        default:
+            println("clear error")
+        }
     }
+    
 
+    //ボタンが押された時の処理
     func tappedbutton(number: Int){
         switch selectButton{
         case 1:
-            labal1.text = String(number)
+            label1.text = String(number)
             selectButton = 2
+            label1.backgroundColor = nil
+            label2.backgroundColor = UIColor.orangeColor()
+            if number == 2{
+                changeEnabled([Button3], enabled: true)
+            }else{
+                changeEnabled([Button3, Button4, Button5, Button6, Button7, Button8, Button9], enabled: true)
+            }
         case 2:
-            labal2.text = String(number)
+            label2.text = String(number)
             selectButton = 3
+            label2.backgroundColor = nil
+            label3.backgroundColor = UIColor.orangeColor()
+            changeEnabled([Button4, Button5], enabled: true)
+            changeEnabled([Button6, Button7, Button8, Button9], enabled: false)
         case 3:
-            labal3.text = String(number)
+            label3.text = String(number)
             selectButton = 4
+            label3.backgroundColor = nil
+            label4.backgroundColor = UIColor.orangeColor()
+            changeEnabled([Button6, Button7, Button8, Button9], enabled: true)
         case 4:
-            labal4.text = String(number)
+            label4.text = String(number)
         default:
             println("tappedbutton error")
         }
     }
     
+    //ボタンのenableを変更
+    func changeEnabled(button: [UIButton!], enabled: Bool){
+        if enabled == true{
+            for abutton in button{
+                abutton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+                abutton.enabled = true
+            }
+        }else{
+            for abutton in button{
+                abutton.setTitleColor(UIColor(white: 0.69, alpha: 1), forState: UIControlState.Normal)
+                abutton.enabled = false
+            }
+        }
+    }
+    
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
