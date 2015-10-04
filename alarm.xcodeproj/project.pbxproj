@@ -14,7 +14,7 @@
 		CA6C82CB1BA13A44008DAF4A /* alarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C82CA1BA13A44008DAF4A /* alarmTests.swift */; };
 		CA6C82D71BA19F1C008DAF4A /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82D61BA19F1C008DAF4A /* alarm.caf */; };
 		CABDAAE71BC153E3008A75FF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE61BC153E3008A75FF /* TableViewController.swift */; };
-		CAC888721BB2B5420029333E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC888711BB2B5420029333E /* ViewController.swift */; };
+		CABDAAE91BC16333008A75FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE81BC16333008A75FF /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		CA6C82CA1BA13A44008DAF4A /* alarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmTests.swift; sourceTree = "<group>"; };
 		CA6C82D61BA19F1C008DAF4A /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm.caf; sourceTree = "<group>"; };
 		CABDAAE61BC153E3008A75FF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		CAC888711BB2B5420029333E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		CABDAAE81BC16333008A75FF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 		CA6C82B11BA13A44008DAF4A /* alarm */ = {
 			isa = PBXGroup;
 			children = (
-				CAC888711BB2B5420029333E /* ViewController.swift */,
+				CABDAAE81BC16333008A75FF /* ViewController.swift */,
 				CABDAAE61BC153E3008A75FF /* TableViewController.swift */,
 				CA6C82B41BA13A44008DAF4A /* AppDelegate.swift */,
 				CA6C82B81BA13A44008DAF4A /* Main.storyboard */,
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC888721BB2B5420029333E /* ViewController.swift in Sources */,
+				CABDAAE91BC16333008A75FF /* ViewController.swift in Sources */,
 				CABDAAE71BC153E3008A75FF /* TableViewController.swift in Sources */,
 				CA6C82B51BA13A44008DAF4A /* AppDelegate.swift in Sources */,
 			);
