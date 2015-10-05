@@ -13,6 +13,7 @@
 		CA6C82BF1BA13A44008DAF4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82BD1BA13A44008DAF4A /* LaunchScreen.xib */; };
 		CA6C82CB1BA13A44008DAF4A /* alarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C82CA1BA13A44008DAF4A /* alarmTests.swift */; };
 		CA6C82D71BA19F1C008DAF4A /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82D61BA19F1C008DAF4A /* alarm.caf */; };
+		CA9820531BC186290033CAB9 /* s00210.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9820521BC186290033CAB9 /* s00210.png */; };
 		CABDAAE71BC153E3008A75FF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE61BC153E3008A75FF /* TableViewController.swift */; };
 		CABDAAE91BC16333008A75FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE81BC16333008A75FF /* ViewController.swift */; };
 		CABDAAEB1BC16A46008A75FF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAEA1BC16A46008A75FF /* TableViewCell.swift */; };
@@ -39,6 +40,7 @@
 		CA6C82C91BA13A44008DAF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA6C82CA1BA13A44008DAF4A /* alarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmTests.swift; sourceTree = "<group>"; };
 		CA6C82D61BA19F1C008DAF4A /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm.caf; sourceTree = "<group>"; };
+		CA9820521BC186290033CAB9 /* s00210.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s00210.png; sourceTree = "<group>"; };
 		CABDAAE61BC153E3008A75FF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CABDAAE81BC16333008A75FF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CABDAAEA1BC16A46008A75FF /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		CA6C82B21BA13A44008DAF4A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA9820521BC186290033CAB9 /* s00210.png */,
 				CA6C82D61BA19F1C008DAF4A /* alarm.caf */,
 				CA6C82B31BA13A44008DAF4A /* Info.plist */,
 			);
@@ -165,7 +168,9 @@
 		CA6C82A71BA13A44008DAF4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = sho;
 				TargetAttributes = {
 					CA6C82AE1BA13A44008DAF4A = {
@@ -201,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9820531BC186290033CAB9 /* s00210.png in Resources */,
 				CA6C82BA1BA13A44008DAF4A /* Main.storyboard in Resources */,
 				CA6C82BF1BA13A44008DAF4A /* LaunchScreen.xib in Resources */,
 				CA6C82D71BA19F1C008DAF4A /* alarm.caf in Resources */,
@@ -288,6 +294,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -355,6 +362,7 @@
 				INFOPLIST_FILE = alarm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sho.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -366,6 +374,7 @@
 				INFOPLIST_FILE = alarm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sho.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -384,6 +393,7 @@
 				);
 				INFOPLIST_FILE = alarmTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sho.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alarm.app/alarm";
 			};
@@ -399,6 +409,7 @@
 				);
 				INFOPLIST_FILE = alarmTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sho.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alarm.app/alarm";
 			};

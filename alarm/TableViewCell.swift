@@ -13,7 +13,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet var timeLabel: UILabel!
     
     @IBAction func cancel(){
-        println("aaaaaaa")
+        print("aaaaaaa")
     }
 
     override func awakeFromNib() {

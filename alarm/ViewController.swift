@@ -87,15 +87,15 @@ class ViewController: UIViewController {
     @IBAction func set(){
         var nowDate: NSDate = NSDate()
         var nowCalendar: NSCalendar = NSCalendar.currentCalendar()
-        var nowComps = nowCalendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: nowDate)
+        var nowComps = nowCalendar.components([NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: nowDate)
         var nowHour: Int = nowComps.hour
         var nowMinute: Int = nowComps.minute
         var nowSecond: Int = nowComps.second
         var distantHour: Int!
         var distantMinute: Int!
         var distantSecond: Int!
-        var setHour: Int = label1.text!.toInt()! * 10 + label2.text!.toInt()!
-        var setMinutes: Int = label3.text!.toInt()! * 10 + label4.text!.toInt()!
+        var setHour: Int = Int(label1.text!)! * 10 + Int(label2.text!)!
+        var setMinutes: Int = Int(label3.text!)! * 10 + Int(label4.text!)!
         var samedate: Bool = false
         
         
@@ -151,7 +151,7 @@ class ViewController: UIViewController {
             var notifications = UIApplication.sharedApplication().scheduledLocalNotifications
             for aNotification in notifications{
                 let userinfo: NSDictionary = aNotification.userInfo!!
-                println(userinfo["timeID"])
+                print(userinfo["timeID"])
             }
         }
         
@@ -161,7 +161,7 @@ class ViewController: UIViewController {
         var minuteString: String = NSString(format: "%02d", setMinutes) as String
         let alart: UIAlertController = UIAlertController(title: "アラートをセット", message: hourString +  "時" + minuteString + "分にセットしました。マナーモード、おやすみモードのときは音が鳴らないのでご注意ください", preferredStyle: UIAlertControllerStyle.Alert)
         let okButton: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-            println("")
+            print("")
         }
         alart.addAction(okButton)
         self.presentViewController(alart, animated: true, completion: nil)
@@ -198,7 +198,7 @@ class ViewController: UIViewController {
             label3.text = "0"
             }
         default:
-            println("clear error")
+            print("clear error")
         }
     }
     
@@ -232,7 +232,7 @@ class ViewController: UIViewController {
         case 4:
             label4.text = String(number)
         default:
-            println("tappedbutton error")
+            print("tappedbutton error")
         }
     }
     
