@@ -35,6 +35,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //ローカル通知全削除
+        //UIApplication.sharedApplication().cancelAllLocalNotifications()
 
         // Do any additional setup after loading the view.
     }
@@ -85,30 +87,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func set(){
-        var nowDate: NSDate = NSDate()
-        var nowCalendar: NSCalendar = NSCalendar.currentCalendar()
-        var nowComps = nowCalendar.components([NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: nowDate)
+        let nowDate: NSDate = NSDate()
+        let nowCalendar: NSCalendar = NSCalendar.currentCalendar()
+        let nowComps = nowCalendar.components([NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: nowDate)
         var nowHour: Int = nowComps.hour
-        var nowMinute: Int = nowComps.minute
-        var nowSecond: Int = nowComps.second
+        let nowMinute: Int = nowComps.minute
+        let nowSecond: Int = nowComps.second
         var distantHour: Int!
         var distantMinute: Int!
-        var distantSecond: Int!
-        var setHour: Int = Int(label1.text!)! * 10 + Int(label2.text!)!
-        var setMinutes: Int = Int(label3.text!)! * 10 + Int(label4.text!)!
+        let setHour: Int = Int(label1.text!)! * 10 + Int(label2.text!)!
+        let setMinutes: Int = Int(label3.text!)! * 10 + Int(label4.text!)!
         var samedate: Bool = false
         
         
         //同じ時間にアラームがセットされていないか確認
-        var notifications = UIApplication.sharedApplication().scheduledLocalNotifications
-        for aNotification in notifications{
-            let userinfo: NSDictionary = aNotification.userInfo!!
+        let notifications = UIApplication.sharedApplication().scheduledLocalNotifications
+        for aNotification in notifications!{
+            let userinfo: NSDictionary = aNotification.userInfo!
             if userinfo["timeID"] as! String == String(setHour) + String(setMinutes){
                 samedate = true
             }
         }
-        
-        
+                
         if samedate == false{
             //ローカル通知の設定
             if setMinutes >= nowMinute{
@@ -123,42 +123,42 @@ class ViewController: UIViewController {
                 distantHour = setHour - nowHour + 24
             }
             
-            var notification = UILocalNotification()
+            let notification = UILocalNotification()
             notification.fireDate = NSDate(timeIntervalSinceNow: Double((distantHour * 60 + distantMinute) * 60 - nowSecond))
             notification.timeZone = NSTimeZone.defaultTimeZone()
             notification.alertBody = "アラーム"
             notification.alertAction = "開く"
             notification.soundName = "alarm.caf"
             notification.userInfo = ["timeID": String(setHour) + String(setMinutes), "hour": String(setHour), "minute": String(setMinutes)]
-            UIApplication.sharedApplication().scheduleLocalNotification(notification);
-            
-            
-            //入力画面の初期化
-            selectLabel = 1
-            changeEnabled([Button3, Button4, Button5, Button6, Button7, Button8, Button9], enabled: false)
-            label1.text = "0"
-            label2.text = "0"
-            label3.text = "0"
-            label4.text = "0"
-            label1.backgroundColor = UIColor.orangeColor()
-            label2.backgroundColor = nil
-            label3.backgroundColor = nil
-            label4.backgroundColor = nil
-            
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
             
             
             //ログ表示
-            var notifications = UIApplication.sharedApplication().scheduledLocalNotifications
-            for aNotification in notifications{
-                let userinfo: NSDictionary = aNotification.userInfo!!
+            let notifications = UIApplication.sharedApplication().scheduledLocalNotifications
+            for aNotification in notifications!{
+                let userinfo: NSDictionary = aNotification.userInfo!
                 print(userinfo["timeID"])
             }
         }
         
         
+        //入力画面の初期化
+        selectLabel = 1
+        changeEnabled([Button3, Button4, Button5, Button6, Button7, Button8, Button9], enabled: false)
+        label1.text = "0"
+        label2.text = "0"
+        label3.text = "0"
+        label4.text = "0"
+        label1.backgroundColor = UIColor.orangeColor()
+        label2.backgroundColor = nil
+        label3.backgroundColor = nil
+        label4.backgroundColor = nil
+
+        
+        
         //alartを表示
-        var hourString: String = NSString(format: "%02d", setHour) as String
-        var minuteString: String = NSString(format: "%02d", setMinutes) as String
+        let hourString: String = NSString(format: "%02d", setHour) as String
+        let minuteString: String = NSString(format: "%02d", setMinutes) as String
         let alart: UIAlertController = UIAlertController(title: "アラートをセット", message: hourString +  "時" + minuteString + "分にセットしました。マナーモード、おやすみモードのときは音が鳴らないのでご注意ください", preferredStyle: UIAlertControllerStyle.Alert)
         let okButton: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
             print("")
@@ -194,7 +194,7 @@ class ViewController: UIViewController {
                 selectLabel = 3
             label3.backgroundColor = UIColor.orangeColor()
             label4.backgroundColor = nil
-            changeEnabled([Button6, Button7, Button8, Button9], enabled: true)
+            changeEnabled([Button6, Button7, Button8, Button9], enabled: false)
             label3.text = "0"
             }
         default:
@@ -245,7 +245,7 @@ class ViewController: UIViewController {
             }
         }else{
             for abutton in button{
-                abutton.setTitleColor(UIColor(white: 0.69, alpha: 1), forState: UIControlState.Normal)
+                abutton.setTitleColor(UIColor(white: 0.70, alpha: 1), forState: UIControlState.Normal)
                 abutton.enabled = false
             }
         }

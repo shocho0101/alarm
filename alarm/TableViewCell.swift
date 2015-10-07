@@ -10,12 +10,10 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
-    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var hourLabel: UILabel!
+    @IBOutlet var minuteLabel: UILabel!
     
-    @IBAction func cancel(){
-        print("aaaaaaa")
-    }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
