@@ -98,13 +98,15 @@ class ViewController: UIViewController {
         let setHour: Int = Int(label1.text!)! * 10 + Int(label2.text!)!
         let setMinutes: Int = Int(label3.text!)! * 10 + Int(label4.text!)!
         var samedate: Bool = false
+        let hourString: String = NSString(format: "%02d", setHour) as String
+        let minuteString: String = NSString(format: "%02d", setMinutes) as String
         
         
         //同じ時間にアラームがセットされていないか確認
         let notifications = UIApplication.sharedApplication().scheduledLocalNotifications
         for aNotification in notifications!{
             let userinfo: NSDictionary = aNotification.userInfo!
-            if userinfo["timeID"] as! String == String(setHour) + String(setMinutes){
+            if userinfo["timeID"] as! String == hourString + minuteString{
                 samedate = true
             }
         }
@@ -129,7 +131,7 @@ class ViewController: UIViewController {
             notification.alertBody = "アラーム"
             notification.alertAction = "開く"
             notification.soundName = "alarm.caf"
-            notification.userInfo = ["timeID": String(setHour) + String(setMinutes), "hour": String(setHour), "minute": String(setMinutes)]
+            notification.userInfo = ["timeID": hourString + minuteString, "hour": String(setHour), "minute": String(setMinutes)]
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
             
             
@@ -157,8 +159,6 @@ class ViewController: UIViewController {
         
         
         //alartを表示
-        let hourString: String = NSString(format: "%02d", setHour) as String
-        let minuteString: String = NSString(format: "%02d", setMinutes) as String
         let alart: UIAlertController = UIAlertController(title: "アラートをセット", message: hourString +  "時" + minuteString + "分にセットしました。マナーモード、おやすみモードのときは音が鳴らないのでご注意ください", preferredStyle: UIAlertControllerStyle.Alert)
         let okButton: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
             print("")

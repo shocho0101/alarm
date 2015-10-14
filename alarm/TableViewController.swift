@@ -11,6 +11,8 @@ import UIKit
 class TableViewController: UITableViewController {
     
     var notifications = UIApplication.sharedApplication().scheduledLocalNotifications!
+    
+    @IBOutlet var editbutton: UIBarButtonItem!
 
     override func viewDidLoad() {
         
@@ -20,7 +22,8 @@ class TableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,17 +71,34 @@ class TableViewController: UITableViewController {
             var notifications = UIApplication.sharedApplication().scheduledLocalNotifications
             let aNotification = notifications![indexPath.row]
             UIApplication.sharedApplication().cancelLocalNotification(aNotification)
-//            notifications?.removeAtIndex(indexPath.row)
-//            tableView.reloadData()
+
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+            let Notifications = UIApplication.sharedApplication().scheduledLocalNotifications
+            for aNotification in Notifications!{
+                let userinfo: NSDictionary = aNotification.userInfo!
+                print(userinfo["timeID"])
+            }
+
         }
         
         delete.backgroundColor = UIColor.redColor()
         
         return [delete]
         
+        
     }
     
+    @IBAction func edit(){
+        switch tableView.editing{
+        case true:
+            tableView.setEditing(false, animated: true)
+            editbutton.title = "編集"
+            
+        case false:
+            tableView.setEditing(true, animated: true)
+            editbutton.title = "完了"
+        }
+    }
 
     
   

@@ -13,6 +13,8 @@
 		CA6C82BF1BA13A44008DAF4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82BD1BA13A44008DAF4A /* LaunchScreen.xib */; };
 		CA6C82CB1BA13A44008DAF4A /* alarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C82CA1BA13A44008DAF4A /* alarmTests.swift */; };
 		CA6C82D71BA19F1C008DAF4A /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82D61BA19F1C008DAF4A /* alarm.caf */; };
+		CA887A471BCE7580007AEF41 /* icon_ul.png in Resources */ = {isa = PBXBuildFile; fileRef = CA887A461BCE7580007AEF41 /* icon_ul.png */; settings = {ASSET_TAGS = (); }; };
+		CA887A491BCE7628007AEF41 /* ios7-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = CA887A481BCE7628007AEF41 /* ios7-gear.png */; settings = {ASSET_TAGS = (); }; };
 		CA9820531BC186290033CAB9 /* s00210.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9820521BC186290033CAB9 /* s00210.png */; };
 		CABDAAE71BC153E3008A75FF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE61BC153E3008A75FF /* TableViewController.swift */; };
 		CABDAAE91BC16333008A75FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE81BC16333008A75FF /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 		CA6C82C91BA13A44008DAF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA6C82CA1BA13A44008DAF4A /* alarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmTests.swift; sourceTree = "<group>"; };
 		CA6C82D61BA19F1C008DAF4A /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm.caf; sourceTree = "<group>"; };
+		CA887A461BCE7580007AEF41 /* icon_ul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ul.png; sourceTree = "<group>"; };
+		CA887A481BCE7628007AEF41 /* ios7-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-gear.png"; sourceTree = "<group>"; };
 		CA9820521BC186290033CAB9 /* s00210.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s00210.png; sourceTree = "<group>"; };
 		CABDAAE61BC153E3008A75FF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CABDAAE81BC16333008A75FF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 		CA6C82B21BA13A44008DAF4A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA887A481BCE7628007AEF41 /* ios7-gear.png */,
+				CA887A461BCE7580007AEF41 /* icon_ul.png */,
 				CA9820521BC186290033CAB9 /* s00210.png */,
 				CA6C82D61BA19F1C008DAF4A /* alarm.caf */,
 				CA6C82B31BA13A44008DAF4A /* Info.plist */,
@@ -207,10 +213,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA9820531BC186290033CAB9 /* s00210.png in Resources */,
+				CA887A471BCE7580007AEF41 /* icon_ul.png in Resources */,
 				CA6C82BA1BA13A44008DAF4A /* Main.storyboard in Resources */,
 				CA6C82BF1BA13A44008DAF4A /* LaunchScreen.xib in Resources */,
 				CA6C82D71BA19F1C008DAF4A /* alarm.caf in Resources */,
 				CA6C82BC1BA13A44008DAF4A /* Images.xcassets in Resources */,
+				CA887A491BCE7628007AEF41 /* ios7-gear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
