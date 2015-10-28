@@ -159,12 +159,18 @@ class ViewController: UIViewController {
         
         
         //alartを表示
-        let alart: UIAlertController = UIAlertController(title: "アラートをセット", message: hourString +  "時" + minuteString + "分にセットしました。マナーモード、おやすみモードのときは音が鳴らないのでご注意ください", preferredStyle: UIAlertControllerStyle.Alert)
-        let okButton: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
-            print("")
+        let alart: UIAlertController = UIAlertController(title: hourString + ":" + minuteString + "にセットしました", message: "マナーモード、おやすみモードのときは音が鳴らないのでご注意ください", preferredStyle: UIAlertControllerStyle.Alert)
+//        let okButton: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+//            print("")
+//        }
+//        alart.addAction(okButton)
+        self.presentViewController(alart, animated: true) { () -> Void in
+            let delay = 0.5 * Double(NSEC_PER_SEC)
+            let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            dispatch_after(time, dispatch_get_main_queue(), {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            })
         }
-        alart.addAction(okButton)
-        self.presentViewController(alart, animated: true, completion: nil)
     }
     
     @IBAction func clear(){
