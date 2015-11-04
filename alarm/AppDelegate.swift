@@ -35,6 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         //アプリ起動中の動作
+//        let now = NSDate()
+//        
+//        var alert: UIAlertController = UIAlertController(title: "アラーム", message: "", preferredStyle: <#T##UIAlertControllerStyle#>)
+//        self.window!.rootViewController!.presentViewController(alert, animated: true, completion: nil)
     }
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
         //アプリがバックグラウンドの時の動作

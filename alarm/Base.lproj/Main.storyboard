@@ -72,7 +72,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button7" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xZr-vW-LXG"/>
+                                    <action selector="tappedbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qcA-IZ-SRd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9B-H0-HJE">
@@ -85,7 +85,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button8" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Vyk-jG-k6x"/>
+                                    <action selector="tappedbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="03S-Vy-LkC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRJ-SK-hrq">
@@ -98,7 +98,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button9" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4qz-jb-mlg"/>
+                                    <action selector="tappedbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3AU-Jj-Bal"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPH-NN-95q">
@@ -111,7 +111,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button4" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kxh-ps-39I"/>
+                                    <action selector="tappedbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zsD-uX-8m4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztz-Tk-OOE">
@@ -124,7 +124,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button5" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sB7-Tv-fvj"/>
+                                    <action selector="tappedbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gBu-g5-Cpb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTe-ev-jB4">
@@ -137,7 +137,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button6" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gMV-f6-QGp"/>
+                                    <action selector="tappedbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cMh-sj-qKg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGH-r9-1qt">
@@ -150,7 +150,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button1" destination="vXZ-lx-hvc" eventType="touchUpInside" id="82g-qj-vBz"/>
+                                    <action selector="tappedbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0vb-0P-R1u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOR-mf-U2w">
@@ -163,7 +163,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button2" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WSB-NE-FAz"/>
+                                    <action selector="tappedbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5L6-fZ-AX0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgJ-pC-x2t">
@@ -176,7 +176,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button3" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QXp-uX-cz8"/>
+                                    <action selector="tappedbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VkX-Ls-9TV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a99-Ly-uVC">
@@ -189,20 +189,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="button0" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZNz-3y-sZN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a58-T6-1vN">
-                                <rect key="frame" x="200" y="493" width="200" height="107"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                <state key="normal" title="←">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clear" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TuM-P9-jKf"/>
+                                    <action selector="tappedbutton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="btm-va-29c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR6-aN-ybS">
@@ -216,6 +203,19 @@
                                 </state>
                                 <connections>
                                     <action selector="set" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YNE-o9-bFI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a58-T6-1vN">
+                                <rect key="frame" x="200" y="493" width="200" height="107"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TuM-P9-jKf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -304,6 +304,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="アラーム作成" id="Xe1-tu-Sxt">
+                        <barButtonItem key="leftBarButtonItem" image="gearIcon" id="Xze-ch-4Fc">
+                            <connections>
+                                <segue destination="DFQ-A6-f3e" kind="show" id="dTF-dG-gat"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="listiIcon" id="Ndo-co-CHh">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -333,6 +338,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117" y="356"/>
+        </scene>
+        <!--サウンド-->
+        <scene sceneID="2vN-iJ-PFP">
+            <objects>
+                <tableViewController id="DFQ-A6-f3e" customClass="SettingTableViewController" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0aN-ZG-72G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ywn-kf-m9v" customClass="SettingTableViewCell" customModule="alarm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ywn-kf-m9v" id="xXd-1d-2wi">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tm6-Be-seH">
+                                            <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="tm6-Be-seH" firstAttribute="centerY" secondItem="xXd-1d-2wi" secondAttribute="centerY" id="EQh-hU-63y"/>
+                                        <constraint firstItem="tm6-Be-seH" firstAttribute="leading" secondItem="xXd-1d-2wi" secondAttribute="leadingMargin" id="WfN-Aq-dsE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="Label" destination="tm6-Be-seH" id="cnM-eL-WjF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="DFQ-A6-f3e" id="add-DL-Y4D"/>
+                            <outlet property="delegate" destination="DFQ-A6-f3e" id="FpD-Ha-Uiz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="サウンド" id="Ydp-km-ca5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ez-B0-7f9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="-356"/>
         </scene>
         <!--一覧-->
         <scene sceneID="M9P-Kf-r0w">
@@ -436,10 +490,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feE-UY-HAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="1017"/>
+            <point key="canvasLocation" x="153" y="356"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gearIcon" width="22" height="22"/>
         <image name="listiIcon" width="22" height="22"/>
     </resources>
 </document>

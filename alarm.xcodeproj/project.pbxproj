@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		CA6C82B51BA13A44008DAF4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C82B41BA13A44008DAF4A /* AppDelegate.swift */; };
 		CA6C82BA1BA13A44008DAF4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82B81BA13A44008DAF4A /* Main.storyboard */; };
-		CA6C82BC1BA13A44008DAF4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82BB1BA13A44008DAF4A /* Images.xcassets */; };
 		CA6C82BF1BA13A44008DAF4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82BD1BA13A44008DAF4A /* LaunchScreen.xib */; };
 		CA6C82CB1BA13A44008DAF4A /* alarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C82CA1BA13A44008DAF4A /* alarmTests.swift */; };
 		CA6C82D71BA19F1C008DAF4A /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA6C82D61BA19F1C008DAF4A /* alarm.caf */; };
-		CA887A471BCE7580007AEF41 /* icon_ul.png in Resources */ = {isa = PBXBuildFile; fileRef = CA887A461BCE7580007AEF41 /* icon_ul.png */; settings = {ASSET_TAGS = (); }; };
-		CA887A491BCE7628007AEF41 /* ios7-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = CA887A481BCE7628007AEF41 /* ios7-gear.png */; settings = {ASSET_TAGS = (); }; };
-		CA9820531BC186290033CAB9 /* s00210.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9820521BC186290033CAB9 /* s00210.png */; };
+		CA867F341BE64623000CF0EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA867F331BE64623000CF0EA /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		CA867F361BE655A2000CF0EA /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA867F351BE655A2000CF0EA /* SettingTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CA867F381BE655CF000CF0EA /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA867F371BE655CF000CF0EA /* SettingTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		CABDAAE71BC153E3008A75FF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE61BC153E3008A75FF /* TableViewController.swift */; };
 		CABDAAE91BC16333008A75FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE81BC16333008A75FF /* ViewController.swift */; };
 		CABDAAEB1BC16A46008A75FF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAEA1BC16A46008A75FF /* TableViewCell.swift */; };
@@ -32,19 +31,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA43A2011BEA22D2008B7E28 /* Apex.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Apex.caf; sourceTree = "<group>"; };
+		CA43A2021BEA22D2008B7E28 /* Beacon.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Beacon.caf; sourceTree = "<group>"; };
+		CA43A2031BEA22D2008B7E28 /* Bulletin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bulletin.caf; sourceTree = "<group>"; };
+		CA43A2041BEA22D2008B7E28 /* By The Seaside.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "By The Seaside.caf"; sourceTree = "<group>"; };
+		CA43A2051BEA22D2008B7E28 /* Chimes.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chimes.caf; sourceTree = "<group>"; };
+		CA43A2061BEA22D2008B7E28 /* Circuit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Circuit.caf; sourceTree = "<group>"; };
+		CA43A2071BEA22D2008B7E28 /* Constellation.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Constellation.caf; sourceTree = "<group>"; };
+		CA43A2081BEA22D2008B7E28 /* Cosmic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cosmic.caf; sourceTree = "<group>"; };
+		CA43A2091BEA22D2008B7E28 /* Crystals.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Crystals.caf; sourceTree = "<group>"; };
+		CA43A20A1BEA22D2008B7E28 /* Hillside.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hillside.caf; sourceTree = "<group>"; };
+		CA43A20B1BEA22D2008B7E28 /* Illuminate.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Illuminate.caf; sourceTree = "<group>"; };
+		CA43A20C1BEA22D2008B7E28 /* Night Owl.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Night Owl.caf"; sourceTree = "<group>"; };
+		CA43A20D1BEA22D2008B7E28 /* Opening.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Opening.caf; sourceTree = "<group>"; };
+		CA43A20E1BEA22D2008B7E28 /* Playtime.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Playtime.caf; sourceTree = "<group>"; };
+		CA43A20F1BEA22D2008B7E28 /* Presto.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Presto.caf; sourceTree = "<group>"; };
+		CA43A2101BEA22D2008B7E28 /* Radar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Radar.caf; sourceTree = "<group>"; };
+		CA43A2111BEA22D2008B7E28 /* Radiate.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Radiate.caf; sourceTree = "<group>"; };
+		CA43A2121BEA22D2008B7E28 /* Ripples.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ripples.caf; sourceTree = "<group>"; };
+		CA43A2131BEA22D2008B7E28 /* Sencha.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sencha.caf; sourceTree = "<group>"; };
+		CA43A2141BEA22D2008B7E28 /* Signal.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Signal.caf; sourceTree = "<group>"; };
+		CA43A2151BEA22D2008B7E28 /* Silk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Silk.caf; sourceTree = "<group>"; };
+		CA43A2161BEA22D2008B7E28 /* Slow Rise.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Slow Rise.caf"; sourceTree = "<group>"; };
+		CA43A2171BEA22D2008B7E28 /* Stargaze.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stargaze.caf; sourceTree = "<group>"; };
+		CA43A2181BEA22D2008B7E28 /* Summit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Summit.caf; sourceTree = "<group>"; };
+		CA43A2191BEA22D2008B7E28 /* Twinkle.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Twinkle.caf; sourceTree = "<group>"; };
+		CA43A21A1BEA22D2008B7E28 /* Uplift.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Uplift.caf; sourceTree = "<group>"; };
+		CA43A21B1BEA22D2008B7E28 /* Waves.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Waves.caf; sourceTree = "<group>"; };
 		CA6C82AF1BA13A44008DAF4A /* alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6C82B31BA13A44008DAF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA6C82B41BA13A44008DAF4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA6C82B91BA13A44008DAF4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CA6C82BB1BA13A44008DAF4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA6C82BE1BA13A44008DAF4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CA6C82C41BA13A44008DAF4A /* alarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6C82C91BA13A44008DAF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA6C82CA1BA13A44008DAF4A /* alarmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmTests.swift; sourceTree = "<group>"; };
 		CA6C82D61BA19F1C008DAF4A /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm.caf; sourceTree = "<group>"; };
-		CA887A461BCE7580007AEF41 /* icon_ul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ul.png; sourceTree = "<group>"; };
-		CA887A481BCE7628007AEF41 /* ios7-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios7-gear.png"; sourceTree = "<group>"; };
-		CA9820521BC186290033CAB9 /* s00210.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s00210.png; sourceTree = "<group>"; };
+		CA867F331BE64623000CF0EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CA867F351BE655A2000CF0EA /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		CA867F371BE655CF000CF0EA /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		CABDAAE61BC153E3008A75FF /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CABDAAE81BC16333008A75FF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CABDAAEA1BC16A46008A75FF /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -93,8 +118,10 @@
 				CABDAAE81BC16333008A75FF /* ViewController.swift */,
 				CABDAAE61BC153E3008A75FF /* TableViewController.swift */,
 				CABDAAEA1BC16A46008A75FF /* TableViewCell.swift */,
+				CA867F351BE655A2000CF0EA /* SettingTableViewController.swift */,
+				CA867F371BE655CF000CF0EA /* SettingTableViewCell.swift */,
 				CA6C82B81BA13A44008DAF4A /* Main.storyboard */,
-				CA6C82BB1BA13A44008DAF4A /* Images.xcassets */,
+				CA867F331BE64623000CF0EA /* Images.xcassets */,
 				CA6C82BD1BA13A44008DAF4A /* LaunchScreen.xib */,
 				CA6C82B21BA13A44008DAF4A /* Supporting Files */,
 			);
@@ -104,11 +131,9 @@
 		CA6C82B21BA13A44008DAF4A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CA887A481BCE7628007AEF41 /* ios7-gear.png */,
-				CA887A461BCE7580007AEF41 /* icon_ul.png */,
-				CA9820521BC186290033CAB9 /* s00210.png */,
 				CA6C82D61BA19F1C008DAF4A /* alarm.caf */,
 				CA6C82B31BA13A44008DAF4A /* Info.plist */,
+				CA867EF01BE64392000CF0EA /* Ringtones */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -128,6 +153,40 @@
 				CA6C82C91BA13A44008DAF4A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA867EF01BE64392000CF0EA /* Ringtones */ = {
+			isa = PBXGroup;
+			children = (
+				CA43A2011BEA22D2008B7E28 /* Apex.caf */,
+				CA43A2021BEA22D2008B7E28 /* Beacon.caf */,
+				CA43A2031BEA22D2008B7E28 /* Bulletin.caf */,
+				CA43A2041BEA22D2008B7E28 /* By The Seaside.caf */,
+				CA43A2051BEA22D2008B7E28 /* Chimes.caf */,
+				CA43A2061BEA22D2008B7E28 /* Circuit.caf */,
+				CA43A2071BEA22D2008B7E28 /* Constellation.caf */,
+				CA43A2081BEA22D2008B7E28 /* Cosmic.caf */,
+				CA43A2091BEA22D2008B7E28 /* Crystals.caf */,
+				CA43A20A1BEA22D2008B7E28 /* Hillside.caf */,
+				CA43A20B1BEA22D2008B7E28 /* Illuminate.caf */,
+				CA43A20C1BEA22D2008B7E28 /* Night Owl.caf */,
+				CA43A20D1BEA22D2008B7E28 /* Opening.caf */,
+				CA43A20E1BEA22D2008B7E28 /* Playtime.caf */,
+				CA43A20F1BEA22D2008B7E28 /* Presto.caf */,
+				CA43A2101BEA22D2008B7E28 /* Radar.caf */,
+				CA43A2111BEA22D2008B7E28 /* Radiate.caf */,
+				CA43A2121BEA22D2008B7E28 /* Ripples.caf */,
+				CA43A2131BEA22D2008B7E28 /* Sencha.caf */,
+				CA43A2141BEA22D2008B7E28 /* Signal.caf */,
+				CA43A2151BEA22D2008B7E28 /* Silk.caf */,
+				CA43A2161BEA22D2008B7E28 /* Slow Rise.caf */,
+				CA43A2171BEA22D2008B7E28 /* Stargaze.caf */,
+				CA43A2181BEA22D2008B7E28 /* Summit.caf */,
+				CA43A2191BEA22D2008B7E28 /* Twinkle.caf */,
+				CA43A21A1BEA22D2008B7E28 /* Uplift.caf */,
+				CA43A21B1BEA22D2008B7E28 /* Waves.caf */,
+			);
+			path = Ringtones;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,13 +271,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA9820531BC186290033CAB9 /* s00210.png in Resources */,
-				CA887A471BCE7580007AEF41 /* icon_ul.png in Resources */,
+				CA867F341BE64623000CF0EA /* Images.xcassets in Resources */,
 				CA6C82BA1BA13A44008DAF4A /* Main.storyboard in Resources */,
 				CA6C82BF1BA13A44008DAF4A /* LaunchScreen.xib in Resources */,
 				CA6C82D71BA19F1C008DAF4A /* alarm.caf in Resources */,
-				CA6C82BC1BA13A44008DAF4A /* Images.xcassets in Resources */,
-				CA887A491BCE7628007AEF41 /* ios7-gear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,10 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA867F381BE655CF000CF0EA /* SettingTableViewCell.swift in Sources */,
 				CABDAAE91BC16333008A75FF /* ViewController.swift in Sources */,
 				CABDAAEB1BC16A46008A75FF /* TableViewCell.swift in Sources */,
 				CABDAAE71BC153E3008A75FF /* TableViewController.swift in Sources */,
 				CA6C82B51BA13A44008DAF4A /* AppDelegate.swift in Sources */,
+				CA867F361BE655A2000CF0EA /* SettingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sho.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -384,6 +443,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sho.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
