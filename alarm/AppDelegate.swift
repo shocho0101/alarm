@@ -7,41 +7,47 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var minuteArray: [Int] = []
-    var hourArray: [Int] = []
-    var timeStringArray: [String] = []
-
-
+    let ringtoneFile: [String] = ["Radar","Uplift","Opening","Twinkle","Circuit","Ripples","Summit","Silk","Stargaze","Slow Rise","Chimes","Signal","Hillside","Night Owl","Playtime","Presto","Cosmic","By The Seaside","Illuminate","Signal","Crystals","Constellation","Sencha","Apex","Beacon","Waves","Radiate"]
+    let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    var audioPlayer: AVAudioPlayer!
+    
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [UIUserNotificationType.Sound, UIUserNotificationType.Alert, UIUserNotificationType.Badge], categories: nil))
-        if let _ = launchOptions {
-            
-            let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as! UILocalNotification!
-            if (notification != nil) {
-                //アプリが起動していない時の動作
-
-            }
-            
-        }
-        return true
+        
+        //userDefaltの初期値
+        let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        
+        
+        saveData.registerDefaults(["number": 0])
+        
+                return true
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         //アプリ起動中の動作
-//        let now = NSDate()
-//        
-//        var alert: UIAlertController = UIAlertController(title: "アラーム", message: "", preferredStyle: <#T##UIAlertControllerStyle#>)
-//        self.window!.rootViewController!.presentViewController(alert, animated: true, completion: nil)
-    }
-    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
-        //アプリがバックグラウンドの時の動作
+        let audioPath: NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(ringtoneFile[saveData.objectForKey("number") as! Int], ofType:"caf")!)
+        
+        do{
+            try audioPlayer = AVAudioPlayer(contentsOfURL: audioPath!)
+        }catch{
+            print("error")
+        }
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        let alert: UIAlertController = UIAlertController(title: "アラーム", message: "時間です", preferredStyle: UIAlertControllerStyle.Alert)
+        let ok: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            self.audioPlayer.stop()
+        }
+        alert.addAction(ok)
+        self.window!.rootViewController!.presentViewController(alert, animated: true, completion: nil)
     }
     
     func applicationWillResignActive(application: UIApplication) {

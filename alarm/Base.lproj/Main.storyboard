@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--アラーム作成-->
@@ -304,17 +305,19 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="アラーム作成" id="Xe1-tu-Sxt">
-                        <barButtonItem key="leftBarButtonItem" image="gearIcon" id="Xze-ch-4Fc">
-                            <connections>
-                                <segue destination="DFQ-A6-f3e" kind="show" id="dTF-dG-gat"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="listiIcon" id="Ndo-co-CHh">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="KO8-0c-eMq" kind="show" id="n4l-Ra-Bqw"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="listiIcon" id="Ndo-co-CHh">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="KO8-0c-eMq" kind="show" id="n4l-Ra-Bqw"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="gearIcon" id="Xze-ch-4Fc">
+                                <connections>
+                                    <segue destination="DFQ-A6-f3e" kind="show" id="dTF-dG-gat"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="Button0" destination="a99-Ly-uVC" id="7fY-fo-blv"/>
@@ -339,7 +342,7 @@
             </objects>
             <point key="canvasLocation" x="1117" y="356"/>
         </scene>
-        <!--サウンド-->
+        <!--Setting Table View Controller-->
         <scene sceneID="2vN-iJ-PFP">
             <objects>
                 <tableViewController id="DFQ-A6-f3e" customClass="SettingTableViewController" customModule="alarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -382,7 +385,6 @@
                             <outlet property="delegate" destination="DFQ-A6-f3e" id="FpD-Ha-Uiz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="サウンド" id="Ydp-km-ca5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ez-B0-7f9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

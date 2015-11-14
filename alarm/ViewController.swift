@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     
     var selectLabel: Int = 1
     
+    let ringtoneFile: [String] = ["Radar","Uplift","Opening","Twinkle","Circuit","Ripples","Summit","Silk","Stargaze","Slow Rise","Chimes","Signal","Hillside","Night Owl","Playtime","Presto","Cosmic","By The Seaside","Illuminate","Signal","Crystals","Constellation","Sencha","Apex","Beacon","Waves","Radiate"]
+    let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
 
     override func viewDidLoad() {
@@ -45,46 +47,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    @IBAction func button1(){
-//        tappedbutton(1)
-//    }
-//    
-//    @IBAction func button2(){
-//        tappedbutton(2)
-//    }
-//
-//    @IBAction func button3(){
-//        tappedbutton(3)
-//    }
-//
-//    @IBAction func button4(){
-//        tappedbutton(4)
-//    }
-//
-//    @IBAction func button5(){
-//        tappedbutton(5)
-//    }
-//
-//    @IBAction func button6(){
-//        tappedbutton(6)
-//    }
-//
-//    @IBAction func button7(){
-//        tappedbutton(7)
-//    }
-//
-//    @IBAction func button8(){
-//        tappedbutton(8)
-//    }
-//
-//    @IBAction func button9(){
-//        tappedbutton(9)
-//    }
-//
-//    @IBAction func button0(){
-//        tappedbutton(0)
-//    }
 
     @IBAction func set(){
         let nowDate: NSDate = NSDate()
@@ -130,10 +92,10 @@ class ViewController: UIViewController {
             notification.timeZone = NSTimeZone.defaultTimeZone()
             notification.alertBody = "アラーム"
             notification.alertAction = "開く"
-            notification.soundName = "alarm.caf"
+            notification.soundName = (ringtoneFile[saveData.objectForKey("number") as! Int] + ".caf")
             
             
-//            let soundURL = NSURL(fileURLWithPath: "/System/Library/Audio/UISound/new-mail.caf")
+
             
             notification.userInfo = ["timeID": hourString + minuteString, "hour": String(setHour), "minute": String(setMinutes)]
             UIApplication.sharedApplication().scheduleLocalNotification(notification)

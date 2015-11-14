@@ -15,6 +15,33 @@
 		CA867F341BE64623000CF0EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA867F331BE64623000CF0EA /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 		CA867F361BE655A2000CF0EA /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA867F351BE655A2000CF0EA /* SettingTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		CA867F381BE655CF000CF0EA /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA867F371BE655CF000CF0EA /* SettingTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		CAA1F6031BF3684500A0C5ED /* Apex.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2011BEA22D2008B7E28 /* Apex.caf */; };
+		CAA1F6041BF3684500A0C5ED /* Beacon.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2021BEA22D2008B7E28 /* Beacon.caf */; };
+		CAA1F6051BF3684500A0C5ED /* Bulletin.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2031BEA22D2008B7E28 /* Bulletin.caf */; };
+		CAA1F6061BF3684500A0C5ED /* By The Seaside.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2041BEA22D2008B7E28 /* By The Seaside.caf */; };
+		CAA1F6071BF3684500A0C5ED /* Chimes.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2051BEA22D2008B7E28 /* Chimes.caf */; };
+		CAA1F6081BF3684500A0C5ED /* Circuit.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2061BEA22D2008B7E28 /* Circuit.caf */; };
+		CAA1F6091BF3684500A0C5ED /* Constellation.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2071BEA22D2008B7E28 /* Constellation.caf */; };
+		CAA1F60A1BF3684500A0C5ED /* Cosmic.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2081BEA22D2008B7E28 /* Cosmic.caf */; };
+		CAA1F60B1BF3684500A0C5ED /* Crystals.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2091BEA22D2008B7E28 /* Crystals.caf */; };
+		CAA1F60C1BF3684500A0C5ED /* Hillside.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A20A1BEA22D2008B7E28 /* Hillside.caf */; };
+		CAA1F60D1BF3684500A0C5ED /* Illuminate.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A20B1BEA22D2008B7E28 /* Illuminate.caf */; };
+		CAA1F60E1BF3684500A0C5ED /* Night Owl.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A20C1BEA22D2008B7E28 /* Night Owl.caf */; };
+		CAA1F60F1BF3684500A0C5ED /* Opening.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A20D1BEA22D2008B7E28 /* Opening.caf */; };
+		CAA1F6101BF3684500A0C5ED /* Playtime.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A20E1BEA22D2008B7E28 /* Playtime.caf */; };
+		CAA1F6111BF3684500A0C5ED /* Presto.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A20F1BEA22D2008B7E28 /* Presto.caf */; };
+		CAA1F6121BF3684500A0C5ED /* Radar.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2101BEA22D2008B7E28 /* Radar.caf */; };
+		CAA1F6131BF3684500A0C5ED /* Radiate.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2111BEA22D2008B7E28 /* Radiate.caf */; };
+		CAA1F6141BF3684500A0C5ED /* Ripples.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2121BEA22D2008B7E28 /* Ripples.caf */; };
+		CAA1F6151BF3684500A0C5ED /* Sencha.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2131BEA22D2008B7E28 /* Sencha.caf */; };
+		CAA1F6161BF3684500A0C5ED /* Signal.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2141BEA22D2008B7E28 /* Signal.caf */; };
+		CAA1F6171BF3684500A0C5ED /* Silk.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2151BEA22D2008B7E28 /* Silk.caf */; };
+		CAA1F6181BF3684500A0C5ED /* Slow Rise.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2161BEA22D2008B7E28 /* Slow Rise.caf */; };
+		CAA1F6191BF3684500A0C5ED /* Stargaze.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2171BEA22D2008B7E28 /* Stargaze.caf */; };
+		CAA1F61A1BF3684500A0C5ED /* Summit.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2181BEA22D2008B7E28 /* Summit.caf */; };
+		CAA1F61B1BF3684500A0C5ED /* Twinkle.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A2191BEA22D2008B7E28 /* Twinkle.caf */; };
+		CAA1F61C1BF3684500A0C5ED /* Uplift.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A21A1BEA22D2008B7E28 /* Uplift.caf */; };
+		CAA1F61D1BF3684500A0C5ED /* Waves.caf in Resources */ = {isa = PBXBuildFile; fileRef = CA43A21B1BEA22D2008B7E28 /* Waves.caf */; };
 		CABDAAE71BC153E3008A75FF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE61BC153E3008A75FF /* TableViewController.swift */; };
 		CABDAAE91BC16333008A75FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAE81BC16333008A75FF /* ViewController.swift */; };
 		CABDAAEB1BC16A46008A75FF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDAAEA1BC16A46008A75FF /* TableViewCell.swift */; };
@@ -271,6 +298,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA1F6031BF3684500A0C5ED /* Apex.caf in Resources */,
+				CAA1F6041BF3684500A0C5ED /* Beacon.caf in Resources */,
+				CAA1F6051BF3684500A0C5ED /* Bulletin.caf in Resources */,
+				CAA1F6061BF3684500A0C5ED /* By The Seaside.caf in Resources */,
+				CAA1F6071BF3684500A0C5ED /* Chimes.caf in Resources */,
+				CAA1F6081BF3684500A0C5ED /* Circuit.caf in Resources */,
+				CAA1F6091BF3684500A0C5ED /* Constellation.caf in Resources */,
+				CAA1F60A1BF3684500A0C5ED /* Cosmic.caf in Resources */,
+				CAA1F60B1BF3684500A0C5ED /* Crystals.caf in Resources */,
+				CAA1F60C1BF3684500A0C5ED /* Hillside.caf in Resources */,
+				CAA1F60D1BF3684500A0C5ED /* Illuminate.caf in Resources */,
+				CAA1F60E1BF3684500A0C5ED /* Night Owl.caf in Resources */,
+				CAA1F60F1BF3684500A0C5ED /* Opening.caf in Resources */,
+				CAA1F6101BF3684500A0C5ED /* Playtime.caf in Resources */,
+				CAA1F6111BF3684500A0C5ED /* Presto.caf in Resources */,
+				CAA1F6121BF3684500A0C5ED /* Radar.caf in Resources */,
+				CAA1F6131BF3684500A0C5ED /* Radiate.caf in Resources */,
+				CAA1F6141BF3684500A0C5ED /* Ripples.caf in Resources */,
+				CAA1F6151BF3684500A0C5ED /* Sencha.caf in Resources */,
+				CAA1F6161BF3684500A0C5ED /* Signal.caf in Resources */,
+				CAA1F6171BF3684500A0C5ED /* Silk.caf in Resources */,
+				CAA1F6181BF3684500A0C5ED /* Slow Rise.caf in Resources */,
+				CAA1F6191BF3684500A0C5ED /* Stargaze.caf in Resources */,
+				CAA1F61A1BF3684500A0C5ED /* Summit.caf in Resources */,
+				CAA1F61B1BF3684500A0C5ED /* Twinkle.caf in Resources */,
+				CAA1F61C1BF3684500A0C5ED /* Uplift.caf in Resources */,
+				CAA1F61D1BF3684500A0C5ED /* Waves.caf in Resources */,
 				CA867F341BE64623000CF0EA /* Images.xcassets in Resources */,
 				CA6C82BA1BA13A44008DAF4A /* Main.storyboard in Resources */,
 				CA6C82BF1BA13A44008DAF4A /* LaunchScreen.xib in Resources */,

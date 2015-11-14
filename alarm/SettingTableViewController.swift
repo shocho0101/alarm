@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SettingTableViewController: UITableViewController {
     
     let ringtoneName: [String] = ["レーダー(デフォルト)","アップリフト","オープニング","きらめき","サーキット","さざ波","サミット","シルク","スターゲイズ","スローライズ","チャイム","ニュース","ヒルサイド","フクロウ","プレイタイム","プレスト","宇宙","海岸で","照明","信号","水晶","星座","煎茶","頂点","灯台","波","放射"]
-    let ringtoneFile: [String] = ["Radar.caf","Uplift.caf","Opening.caf","Twinkle.caf","Circuit.caf","Ripples.caf","Summit.caf","Silk.caf","Stargaze.caf","Slow Rize.caf","Chimes.caf","Signal.caf","Hillside.caf","Night Owl.caf","Playtime.caf","Presto.caf"]
+    let ringtoneFile: [String] = ["Radar","Uplift","Opening","Twinkle","Circuit","Ripples","Summit","Silk","Stargaze","Slow Rise","Chimes","Signal","Hillside","Night Owl","Playtime","Presto","Cosmic","By The Seaside","Illuminate","Signal","Crystals","Constellation","Sencha","Apex","Beacon","Waves","Radiate"]
+    
+    var audioPlayer: AVAudioPlayer!
+    
+    var AppearingCell : [UITableViewCell] = []
+    var playing: Bool = false
+    let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        playing = false
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -45,27 +53,51 @@ class SettingTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SettingTableViewCell
         
         cell.Label.text = ringtoneName[indexPath.row]
-
-        
-
+        if indexPath.row == (saveData.objectForKey("number")) as! Int{
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        }else{
+            cell.accessoryType = UITableViewCellAccessoryType.None
+        }
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //チェックマークをつける
-        for (var i = 0; i < tableView.numberOfRowsInSection(0); i++){
-            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forItem: i, inSection: 0))
-            if indexPath.row == i{
-                cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
-            }else{
-                cell?.accessoryType = UITableViewCellAccessoryType.None
-            }
-        }
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         
-
+        //音楽再生
+        let audioPath: NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(ringtoneFile[indexPath.row], ofType:"caf")!)
+        
+        do{
+            try audioPlayer = AVAudioPlayer(contentsOfURL: audioPath!)
+        }catch{
+            print("error")
+        }
+        if playing == false || saveData.objectForKey("number") as! Int != indexPath.row{
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+            playing = true
+        }else{
+            audioPlayer.stop()
+            playing = false
+        }
+    
+        //選択解除
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    
+    
+        //チェックマークをつける
+        saveData.setObject(indexPath.row, forKey: "number")
+        tableView.reloadData()
+        
+        //既存のnotificationの変更
+        let notifications = UIApplication.sharedApplication().scheduledLocalNotifications
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        for aNotification in notifications!{
+            aNotification.soundName = (ringtoneFile[indexPath.row] + ".caf")
+            UIApplication.sharedApplication().scheduleLocalNotification(aNotification)
+        }
+        
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
